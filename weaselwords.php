@@ -50,7 +50,7 @@ Class Weasel extends LineCallBack{
 $passive = (new Weasel())->setMessenger($messenger);
 
 $messenger->output('Find weasel words');
-WeaselHandler::appendWordsFromFile('data/locales/en/weasel-words.txt');
+WeaselHandler::appendWordsFromFile( __DIR__ . '/data/locales/en/weasel-words.txt');
 FileHandler::setCallback($passive);
 FileHandler::handle($fileName);
 $messenger->output('----');

@@ -52,7 +52,7 @@ Class Passive extends LineCallBack{
 $passive = (new Passive())->setMessenger($messenger);
 
 $messenger->output('Find passive words');
-PassiveHandler::appendWordsFromFile('data/locales/en/passive-words.txt');
+PassiveHandler::appendWordsFromFile(__DIR__ . '/data/locales/en/passive-words.txt');
 FileHandler::setCallback($passive);
 FileHandler::handle($fileName);
 $messenger->output('----');

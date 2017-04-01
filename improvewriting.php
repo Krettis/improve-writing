@@ -3,6 +3,6 @@
 
 include 'startup.php';
 
-passthru('php dups.php ' . $fileName);
-passthru('php passivevoice.php ' . $fileName);
-passthru('php weaselwords.php ' . $fileName);
+passthru('php '. __DIR__. '/dups.php ' . $fileName);
+passthru('php ' . __DIR__ . '/passivevoice.php ' . $fileName);
+passthru('php ' . __DIR__ . '/weaselwords.php ' . $fileName);
