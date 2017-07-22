@@ -1,13 +1,15 @@
 <?php
 
-include 'filehandler.php';
-include 'messaging.php';
-$messenger = new Messaging();
-$colors = new Colors();
+use ImproveWriting\Helpers\Colors;
+use ImproveWriting\Messaging\Messenger;
 
-if($argc !== 2){
-  $messenger->output("usage: php " . $argv[0] . " [filename]");
-  exit;
+require_once 'vendor/autoload.php';
+
+$messenger = new Messenger(Messenger::CLI);
+
+if ($argc !== 2) {
+    $messenger->output("usage: php " . $argv[0] . " [filename]");
+    exit;
 }
 
 $fileName = $argv[1];
