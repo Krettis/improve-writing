@@ -1,0 +1,21 @@
+{
+    "name": "krettis/improve-writing",
+    "description": "toolset for checks on writing",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Krettis",
+            "email": "krettis@gmail.com"
+        }
+    ],
+    "require": {
+        "maknz/slack": "^1.7",
+        "telegram-bot/api": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "ImproveWriting\\": "src/"
+        }
+    }
+}
